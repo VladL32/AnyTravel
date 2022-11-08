@@ -5,8 +5,8 @@
     <title>AnyTravel</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="icon" href="images/favicon.png">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/assign.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/assin.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +35,7 @@
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation">
                 <a href="/assignment">
-                    <img class="nav-link" src="images/favicon.png" width="128" height="96">
+                    <img class="nav-link" src="{{ url_for('static', filename='images/favicon.png') }}" width="128" height="96">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -64,7 +64,7 @@
         </div>
     </div>
     <div class="margins">
-        <img src="images/team.png" style="width:100%; padding-top: 100px; height: 600px; border: none; max-width: 100%"
+        <img src="{{ url_for('static', filename='images/team.png') }}" style="width:100%; padding-top: 100px; height: 600px; border: none; max-width: 100%"
             ;width="100%">
     </div>
     <br>
