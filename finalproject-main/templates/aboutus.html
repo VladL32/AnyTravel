@@ -24,8 +24,6 @@
 </head>
 
 
-
-
 <body>
 
     <script type="text/javascript">
@@ -56,6 +54,7 @@
                     </ul>
                 </div>
             </nav>
+        </div>
     </section>
 
     <div class="row">
@@ -68,8 +67,17 @@
             ;width="100%">
     </div>
     <br>
+       <div class="row">
+        <div class="col-lg-6">
+            <h1 style="margin-left: 5cm;color: rgb(206, 75, 97);font-size: 3rem;margin-top: 20px;">MISSION
+            </h1>
+            <h4 id="box2"style="cursor: pointer;margin-left: 5cm;color:black;font-size: 1.4rem;margin-top: 40px;font-weight: 900;">We introduce
+                people to nature. <br>For the benefit of nature.
+            </h4>
+        </div>
 
-        <div class="col-lg-6" style="margin-top: 200px;">
+        <div class="row">
+            <div class="col-lg-6" style="margin-top: 200px;">
             <h1  style="margin-left: 5cm;color: rgb(31, 155, 93);font-size: 3rem;margin-top: 20px;">VALUES
             </h1>
 
@@ -81,12 +89,11 @@
             </div>
             </ul>
         </div>
-    </div>
 
 
-
-    <script src="scripts/aboutus.js"></script>
+    <script src="{{ url_for('static', filename='scripts/aboutus.js') }}"></script>
 
 </body>
+
 
 </html>
