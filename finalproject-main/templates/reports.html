@@ -9,7 +9,27 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/report.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/assin.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/assin.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7ecf570f16.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
@@ -52,59 +72,59 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/contacts">CONTACTS</a>
                         </li>
+                                                <li class="nav-item">
+                            <a class="nav-link" href="/registr">REGISTER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login1">LOGIN</a>
+                        </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/home">HOME</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
         </div>
     </section>
 
+    <div class="box">
+            <div class="container">
+                <form id="registration_form" method="post">
+                    <ol>
+                        <li><input type="text" style="color: rgb(2, 1, 1);" id="email" name="email"
+                                class="feedback-input" placeholder="Email"></li>
+                        <span class="error_form" id="email_error_message"></span>
 
-    <div class="form-body" style="margin-left: 12cm;margin-bottom: 100cm;">
-        <div class="row">
-            <div class="form-holder">
-                <div class="form-content">
-                    <div class="form-items">
-                        <h3>Have any complaints about tour?</h3>
-                        <p>Fill in the data below.</p>
-                        <form id="registration_form" class="requires-validation" novalidate>
+                        <li><input type="text" style="color: rgb(2, 1, 1);"  id="fullname" name="name"
+                                   class="feedback-input" placeholder="Fullname">
+                        </li>
 
-                            <div class="col-md-12">
-                               <input class="form-control" type="text" name="name" placeholder="Full Name" required>
-                            </div>
+                        <li><input type="text" style="color: rgb(2, 1, 1);"  id="phone" name="phone"
+                                   class="feedback-input" placeholder="Phone Number">
+                        </li>
 
-                            <div class="col-md-12">
-                                <input class="form-control" id="form_email" type="email" name="email" placeholder="E-mail Address" required>
-                            </div>
 
-                           <div class="col-md-12">
-                                <select class="form-select mt-3" required>
-                                      <option selected disabled value="">Choose</option>
+                         <li>
+                            <select class="custom-select" id="tour1" name = "tour1" style="color: rgb(2, 1, 1);">
+                             <option selected disabled value="">Choose</option>
                                       <option value="jweb">Travel delay</option>
                                       <option value="sweb">Bad service</option>
                                       <option value="pmanager">Bad guide</option>
                                       <option value="other">Other</option>
-                               </select>
-                           </div>
 
+                            </select>
+                        </li>
+                        <li><input type="text"style="color: rgb(2, 1, 1);"  id="text" name="text"
+                                   class="feedback-input" placeholder="Your report">
+                        </li>
 
-                           <div class="col-md-12">
-                               <p style="margin-top: 20px;">If you have another problem, describe it: </p>
-                              <textarea maxlength="700" class="form-control" type="text" name="text" placeholder="Write your complaint" required></textarea>
-                           </div>
-
-                        <div class="form-check">
-                          <input name="accept" class="form-check-input" type="checkbox" value="" id="accept" required>
-                          <label class="form-check-label" style="color: white;">I confirm that all data are correct</label>
-                            <div class="form-button mt-3">
-                                <button id="submit" type="submit" id="btnSubmit" class="btn btn-light">Send</button>
-                            </div>
-                        </div>
-                        </form>
-                    </div>
-                </div>
+                        <li><input type="submit" class="" disabled="disabled" id="btnSubmit" value="Submit" name="" /></li>
+                    </ol>
+                </form>
             </div>
         </div>
     </div>
+
 
 
     <script src="scripts/reports.js"></script>
